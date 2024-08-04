@@ -29,17 +29,5 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-fluid-type"),
-    function ({ addUtilities }) {
-      addUtilities(
-        {
-          ".text-gradient": {
-            background: "linear-gradient(to right, #F5BA20, #0000)",
-            "-webkit-background-clip": "text",
-            "-webkit-text-fill-color": "transparent",
-          },
-        },
-        ["responsive", "hover"],
-      );
-    },
   ],
 };
