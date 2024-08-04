@@ -1,9 +1,7 @@
 ---
-import HackerImage from '~/assets/hacker.webp';
-import HeroImage from '~/components/hero-image.astro';
-import Logo from '~/assets/Logo.webp';
 import { Image } from 'astro:assets';
 import Background from '../components/videoBaground.astro';
+import Ilustration from '~/assets/hacker.webp'
 
 const widths = [1000, 1000];
 const sizes = '(min-width: 640px) 10vw, 10vw';
@@ -11,27 +9,12 @@ const sizes = '(min-width: 640px) 10vw, 10vw';
 
 <section class="relative h-full w-full">
 	<Background />
-
-	<div
-		id="splash-bg-fallback"
-		class="absolute inset-0 hidden opacity-40">
-		<HeroImage />
-	</div>
-
 	<div class="relative grid h-full place-items-center sm:grid-cols-2">
-		<h2
-			class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end">
-			<Image
-				alt="Logo"
-				src={Logo}
-				width={100}
-				class="max-lg:w-[80px]"
-			/>
 			<div
-				class="text-center font-extrabold tracking-tighter text-6xl text-gradient md:text-8xl">
-				Bootcamp langsung
-				<br /> dapat kerja dalam,
-				<br /> 12 bulan.
+				class="text-center text-[#f5ba20] font-extrabold tracking-tighter text-6xl md:text-8xl">
+				Bootcamp Langsung
+				<br /> Dapat Kerja Dalam
+				<br /> 12 Bulan.
 			</div>
 		</h2>
 
@@ -39,8 +22,8 @@ const sizes = '(min-width: 640px) 10vw, 10vw';
 			id="astronaut"
 			class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start">
 			<Image
-				class="float-end h-full w-[70vh] object-cover 2xl:mt-[-8rem]"
-				src={HackerImage}
+				class="float-end h-full w-[70vh] 2xl:mt-[-3rem]"
+				src={Ilustration}
 				widths={widths}
 				sizes={sizes}
 				loading="eager"
@@ -66,10 +49,6 @@ const sizes = '(min-width: 640px) 10vw, 10vw';
 		100% {
 			transform: translate3d(0, 30px, 0);
 		}
-	}
-
-	#astronaut {
-		animation: float linear 2.5s infinite alternate;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
