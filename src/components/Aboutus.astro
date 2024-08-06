@@ -1,53 +1,60 @@
 ---
-import { Icon } from "astro-icon/components";
-import ContentSection from "~/components/content-section.astro";
-import type { FeatureItem } from "~/types";
+import { Icon } from 'astro-icon/components';
+import ContentSection from '~/components/content-section.astro';
+import type { FeatureItem } from '~/types';
 
 const features: Array<FeatureItem> = [
-  {
-    title: "Kesempatan Untuk Bangun Portofolio Yang Sesuai Dengan Industri",
-    description:
-      "Project yang akan anda kerjakan di course kami akan sesuai dengan kebutuhan industri",
-    icon: "mdi:handshake",
-  },
-  {
-    title: "Kurikulum Yang Sesuai Dengan Kebutuhan Industri",
-    description:
-      "Kurikulum kami yang relevan dengan dunia industri akan memudahkan anda dalam berkarier",
-    icon: "mdi:feather",
-  },
-  {
-    title: "Mentor Yang Berpengalaman",
-    description:
-      "Mentor yang berpengalaman akan membantu anda dalam menghadapi berbagai tantangan belajar",
-    icon: "mdi:directions-fork",
-  },
-  {
-    title: "Komunitas Yang Aktif Dan Suportif",
-    description:
-      "Komunitas yang aktif dan suportif akan membantu anda ketika kesusahan dan membantu anda untuk berkembang",
-    icon: "mdi:account-group",
-  },
+	{
+		title: 'Opportunity To Build Industry-Suitable Portfolio',
+		description:
+			'The projects you will work on in our course will be in accordance with industry needs',
+		icon: 'mdi:handshake',
+	},
+	{
+		title: 'Curriculum In Accordance With Industry Needs',
+		description:
+			'Our industry-relevant curriculum will make your career easier.',
+		icon: 'mdi:feather',
+	},
+	{
+		title: 'Experienced & Profesional Mentor',
+		description: 'Experienced & Profesional mentors will help you with learning challenges',
+		icon: 'mdi:directions-fork',
+	},
+	{
+		title: 'An Active and Supportive Community',
+		description:
+			'An active and supportive community will help you when you are struggling and help you to grow.',
+		icon: 'mdi:account-group',
+	},
 ];
 ---
 
-<ContentSection title="Kenapa Harus Cyber House?" id="About Us">
-  <Fragment slot="lead">
-    Materi Yang Disajikan  Mudah Dipahami Dan Materi Di Susun Berdasarkan
-    Studi Kasus Nyata
-    Kurikulum Sesuai Dengan Kebutuhan Industri
-  </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {
-      features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-          <div class="size-16 rounded-full border-2 border-current p-3">
-            <Icon name={icon} class="size-full " />
-          </div>
-          <p class="text-center font-extrabold text-xl text-[#f5ba20]">{title}</p>
-          <p class="text-center text-offset text-sm text-white">{description}</p>
-        </li>
-      ))
-    }
-  </ul>
+<ContentSection
+	title="Why A Cyber House?"
+	id="About Us">
+	<Fragment slot="lead">
+		The Material Presented Is Easy To Understand And The Material Is Arranged
+		Based On Real Case Studies Curriculum In Accordance With Industry Needs
+	</Fragment>
+	<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+		{
+			features.map(({ title, description, icon }) => (
+				<li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+					<div class="size-16 rounded-full border-2 border-current p-3">
+						<Icon
+							name={icon}
+							class="size-full "
+						/>
+					</div>
+					<p class="text-center font-extrabold text-[#f5ba20] text-xl">
+						{title}
+					</p>
+					<p class="text-center text-offset text-white text-sm">
+						{description}
+					</p>
+				</li>
+			))
+		}
+	</ul>
 </ContentSection>
