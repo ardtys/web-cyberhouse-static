@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import Background from '../components/videoBaground.astro';
-import Ilustration from '~/assets/Ilustration.webp'
+import Background from './Content/videoBaground.astro';
+import Ilustration from '~/assets/Ilustration.webp';
 
 const widths = [1000, 1000];
 const sizes = '(min-width: 640px) 10vw, 10vw';
@@ -9,27 +9,34 @@ const sizes = '(min-width: 640px) 10vw, 10vw';
 
 <section class="relative h-full w-full">
 	<Background />
-	<div class="relative grid h-full place-items-center sm:grid-cols-2">
+	<div class="relative grid h-full place-items-center md:grid-cols-2">
+		<div class="px-[3rem]">
 			<div
-				class="text-center text-[#f5ba20] font-extrabold tracking-tighter text-6xl md:text-9xl">
-				Get A Job<br/>
-				Within 12
-				<br />Months 
-				<br />With Our Bootcamp
+				class="text-left font-extrabold tracking-tighter text-[#f5ba20] text-5xl max-md:mt-[5rem] md:text-7xl">
+				Securing The Digital World <br class="md:hidden" /> Build The <br /> Future
+				!!!
 			</div>
-		</h2>
+			<p class="max-xl:text-sm">
+				Cyber House is Indonesia's most comprehensive ed-tech company
+				specializing in Cyber Security, Web 3, and Blockchain. We offering
+				enjoyable, flexible, and affordable learning experiences for all,
+				adhering to our motto of equal learning opportunities for everyone
+			</p>
+		</div>
 
 		<div
 			id="astronaut"
 			class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start">
-			<Image
-				class="float-end h-full w-[70vh] 2xl:mt-[-3rem]"
-				src={Ilustration}
-				widths={widths}
-				sizes={sizes}
-				loading="eager"
-				alt="A floating astronaut in a space suit"
-			/>
+			<center>
+				<Image
+					class="float-end h-full w-[70vh] max-md:w-[70%]  max-sm:w-[100%] ml-[0rem] 2xl:mt-[-3rem]"
+					src={Ilustration}
+					widths={widths}
+					sizes={sizes}
+					loading="eager"
+					alt="A floating astronaut in a space suit"
+				/>
+			</center>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,76 @@
+---
+import Iotanic from '~/assets/IOTANIC.webp';
+import Undiksa from '~/assets/Logo_undiksha.webp';
+import Bajategal from '~/assets/logo_universitas_baja_tegal.webp';
+import { Image } from 'astro:assets';
+import '~/styles/Scroll.css';
+---
+
+<center>
+	<div class="logo-wrapper mb-[1rem]">
+		<div
+			class="logo-container"
+			id="logo-container">
+			<div class="logo">
+				<Image
+					src={Iotanic}
+					alt="Iotanic"
+					width={400}
+				/>
+				<Image
+					src={Bajategal}
+					alt="Bajategal"
+					width={250}
+				/>
+				<Image
+					src={Iotanic}
+					alt="Iotanic"
+					width={400}
+				/>
+				<Image
+					src={Undiksa}
+					alt="Undiksa"
+					width={250}
+				/>
+				<Image
+					src={Iotanic}
+					alt="Iotanic"
+					width={400}
+				/>
+				<Image
+					src={Bajategal}
+					alt="Bajategal"
+					width={250}
+				/>
+				<Image
+					src={Iotanic}
+					alt="Iotanic"
+					width={400}
+				/>
+				<Image
+					src={Undiksa}
+					alt="Undiksa"
+					width={250}
+				/>
+			</div>
+		</div>
+	</div>
+</center>
+
+<script>
+	const logoContainer = document.querySelector(
+		'#logo-container'
+	) as HTMLElement;
+
+	function pauseAnimation() {
+		logoContainer.style.animationPlayState = 'paused';
+	}
+
+	function continueAnimation() {
+		logoContainer.style.animationPlayState = 'running';
+	}
+
+	// Pause animation when any logo is hovered
+	logoContainer.addEventListener('mouseover', pauseAnimation);
+	logoContainer.addEventListener('mouseout', continueAnimation);
+</script>

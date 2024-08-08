@@ -7,13 +7,13 @@ import { Image } from 'astro:assets';
 const navItems: Array<NavItem> = [
 	{ title: 'About Us', url: '#About Us' },
 	{ title: 'Partner', url: '#Partner' },
-	{ title: 'Class', url: '#Product' },
+	{ title: 'Product', url: '#Product' },
 ];
 ---
 
 <header
 	id="page-header"
-	class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white">
+	class="absolute top-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white">
 	<a
 		class="flex items-center gap-3 border-none hover:!text-default"
 		href="#">
@@ -51,6 +51,7 @@ const navItems: Array<NavItem> = [
 					class="size-8 hover:text-[#f5ba20]"
 				/>
 			</button>
+		
 		</div>
 		<div
 			id="menu-modal"

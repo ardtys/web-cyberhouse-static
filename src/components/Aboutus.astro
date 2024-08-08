@@ -37,7 +37,7 @@ const features: Array<FeatureItem> = [
 		The Material Presented Is Easy To Understand And The Material Is Arranged
 		Based On Real Case Studies Curriculum In Accordance With Industry Needs
 	</Fragment>
-	<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+	<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 ">
 		{
 			features.map(({ title, description, icon }) => (
 				<li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
@@ -50,7 +50,7 @@ const features: Array<FeatureItem> = [
 					<p class="text-center font-extrabold text-[#f5ba20] text-xl">
 						{title}
 					</p>
-					<p class="text-center text-offset text-white text-sm">
+					<p class="text-center text-offset text-white text-md">
 						{description}
 					</p>
 				</li>
