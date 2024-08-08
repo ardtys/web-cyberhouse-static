@@ -1,44 +1,47 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { Image } from 'astro:assets';
 import ContentSection from '~/components/content-section.astro';
-import Logo from '~/assets/Logo.webp';
 ---
 
-<center>
-	<Image
-		alt="Logo"
-		src={Logo}
-		width={126}
-	/>
-</center>
 <ContentSection
-	title="Observe, Practice & Succees"
+	title="Why Should You Learn Cyber Security?"
 	id="intro">
 	<Fragment slot="lead">
-		Observe Our Best Material, Practice In Real Case Studies And Succees In Cyber Security
+		700++ Cyber Attacks Happen Throughout The Year, Indonesia Has Cyber Security
+		Emergency, What Should We Do?
 	</Fragment>
-	<div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+	<div class="grid grid-cols-1 gap-2">
 		<a
-			href="https://discord.com/invite/4NhxAkph"
-			target="_blank"
+			href="#Product"
 			class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 hover:text-[#f5ba20]">
 			<Icon
-				name="mdi:telescope"
+				name="mdi:file-document-edit-outline"
 				class="size-8"
+			/>
+			<span>Learn More</span>
+		</a>
+		<div class="grid grid-cols-2 gap-2 max-md:grid-cols-1">
+			<a
+				href="https://discord.com/invite/4NhxAkph"
 				target="_blank"
-			/>
-			<span>Join Our Community</span>
-		</a>
-		<a
-			href="https://www.instagram.com/cyberhouse.id?igsh=NDZxa3hlcjQxY3ht"
-			class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 hover:text-[#f5ba20]"
-			target="_blank">
-			<Icon
-				name="mdi:rocket"
-				class="size-8"
-			/>
-			<span>Get More Information</span>
-		</a>
+				class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 hover:text-[#f5ba20]">
+				<Icon
+					name="mdi:telescope"
+					class="size-8"
+					target="_blank"
+				/>
+				<span>Join Our Community</span>
+			</a>
+			<a
+				href="https://www.instagram.com/cyberhouse.id?igsh=NDZxa3hlcjQxY3ht"
+				class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 hover:text-[#f5ba20]"
+				target="_blank">
+				<Icon
+					name="mdi:rocket"
+					class="size-8"
+				/>
+				<span>Get More Information</span>
+			</a>
+		</div>
 	</div>
 </ContentSection>

@@ -1,0 +1,29 @@
+.logo-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  animation-play-state: running;
+  /* Ensure the animation is running by default */
+}
+
+.logo {
+  display: flex;
+  gap: 20px;
+  /* Adjust the gap between logos as needed */
+  align-items: center;
+  /* Ensure logos are vertically centered */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
